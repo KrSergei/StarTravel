@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        _playerCC.Move(new Vector2(_playerJoystick.Horizontal * _moveSpeed, _playerJoystick.Vertical * _moveSpeed) * Time.deltaTime);
+        if(_playerJoystick.Horizontal != 0 || _playerJoystick.Vertical != 0)
+            _playerCC.Move(new Vector2(_playerJoystick.Horizontal * _moveSpeed, _playerJoystick.Vertical * _moveSpeed) * Time.deltaTime);
     }
 }
