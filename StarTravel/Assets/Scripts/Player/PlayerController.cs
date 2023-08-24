@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -17,7 +15,8 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        if(_playerJoystick.Horizontal != 0 || _playerJoystick.Vertical != 0)
+        if (_playerJoystick.Horizontal != 0 || _playerJoystick.Vertical != 0)
             _playerCC.Move(new Vector2(_playerJoystick.Horizontal * _moveSpeed, _playerJoystick.Vertical * _moveSpeed) * Time.deltaTime);
+            
     }
 }
